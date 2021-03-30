@@ -18,7 +18,7 @@ calculateButton.addEventListener('click', function() {
         var checkBox = ingredientsCheckboxes[i];
         
         if ( checkBox.checked == true ) {
-            var ingredientsPrice = parseInt(checkBox.value);
+            var ingredientsPrice = parseFloat(checkBox.value);
 
             prezzoBaseBurger += ingredientsPrice;
 

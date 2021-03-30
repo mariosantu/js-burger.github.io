@@ -80,6 +80,17 @@ main {
     background-color: #fdbc41;
 }
 
+.burgername {
+    border: none;
+    padding: 33px 0;
+    font-size: x-large;
+}
+
+.discount-container label {
+    font-size: larger;
+    padding-right: 15px;
+}
+
 /*footer*/
 footer {
     height: 100px;
