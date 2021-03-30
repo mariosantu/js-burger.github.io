@@ -2,6 +2,10 @@
 //
 //tutto il calcolo avviene all'attivazione del pulsante 'calculate'
 
+//creo array per i coupon
+
+var arrayCoupon = ['coupon1','coupon2','coupon3','coupon4'];
+
 var calculateButton = document.getElementById('calculate');
 
 calculateButton.addEventListener('click', function() {
@@ -21,7 +25,12 @@ calculateButton.addEventListener('click', function() {
         }
     }
 
-    console.log(prezzoBaseBurger);
+    var discountCoupon = document.getElementById('coupon').value;
+
+    if (arrayCoupon.includes(discountCoupon)) {
+        prezzoBaseBurger = prezzoBaseBurger - (prezzoBaseBurger * 0.3);
+    }
+
     document.getElementById('final-price').innerHTML = 'il tuo prezzo è ' + prezzoBaseBurger.toFixed(2) + '$';
 
 });
